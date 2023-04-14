@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Amazon</title>
+</head>
+<body style="background-color:#C0C0C0">
+
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:orange " >
+    <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Amazon</a>
+        <a class="navbar-brand" href="#">
+            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/admin}" href="#" style="color:white" >Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/admin}" href="/manage" style="color:white">Admin</a>
+                </li>
+                 <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/logout}" href="login" style="color:white">Logout</a>
+                </li>
+
+            </ul>
+
+        </div>
+        
+    </div>
+</nav>
+	
+	<div classname="container my-2 p.5" style="border:1px solid black; height:300px;width:600px; margin-left:400px; 
+	margin-top:100px; background-color:#FFFFFF " >
+		<form action="loginData" >
+			<h1 style="margin-left:150px">User Login page</h1>
+			<table class="table"   style="margin-left:50px; width:500px;">
+				<tr >
+					<td >Username: </td>
+					<td>
+						<input type="text" name="username" required>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td>
+						<input type="password" name="password" required>
+					</td>
+				</tr>
+				<tr >
+					<td  colspan="2">
+						<input type="submit" value="login" class="btn btn-warning" style="margin-left:200px">
+					</td>
+				</tr>
+				<tr >
+					<td colspan="2" style="margin-left:200px" >
+						new to website 
+						<span>
+							<a href="register">click here.</a>
+						</span>
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+	</div>
+</body>
+</html>
